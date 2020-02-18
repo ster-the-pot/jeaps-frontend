@@ -1,0 +1,16 @@
+{
+    "parser": "babel-eslint",
+    "extends": ["eslint:recommended","plugin:react/recommended","prettier"],
+    "ignorePatterns": ["serviceWorker.js","webpack.config.js"],
+    "env": {
+      "browser": true,
+      "node": true,
+      "es6":true,
+      "jest": true
+    },
+    "settings": {
+      "react": {
+        "version": "detect"
+      }
+    }
+  }

@@ -1,0 +1,17 @@
+build-deploy:
+  image: node
+  stage: build
+  script:
+    - npm install
+    - npm run build
+    - apt-get update -y
+    - apt-get install ruby-dev ruby -y
+    - gem install dpl
+    - dpl --provider=heroku --app=$APP_NAME --api-key=$API_KEY
+
+  only:
+  - master
+
+
+
+  
